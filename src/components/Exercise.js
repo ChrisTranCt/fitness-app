@@ -3,30 +3,27 @@ import React from 'react'
 import Button from './Button'
 export const SearchExercise=({})=>{
   const APIkey='9pnONi9rmgzDTWHOhupSbg==xq24Cu6Ap1CzolHj'
-    const[text,setText]=useState('')
-    let options = {
-      method: 'GET',
-      headers: { 'x-api-key': APIkey }
-    }
-    
-    let url = 'https://api.api-ninjas.com/v1/geocoding?city=denver'
-    
-    
-    fetch(url,options)
-          .then(res => res.json()) // parse response as JSON
-          .then(data => {
-            console.log(data)
-          })
-          .catch(err => {
-              console.log(`error ${err}`)
-          }); 
+  const[text,setText]=useState('')
+  
     const onSubmit=(e)=>{
         e.preventDefault(); 
         if(text===''){
           alert('Please add a muscle group')
           return
         }
-        console.log(text)
+        let options = {
+          method: 'GET',
+          headers: { 'x-api-key': APIkey }
+        }
+        let url = 'https://api.api-ninjas.com/v1/exercises?muscle='+text
+        fetch(url,options)
+              .then(res => res.json()) // parse response as JSON
+              .then(data => {
+                console.log(data)
+              })
+              .catch(err => {
+                  console.log(`error ${err}`)
+              }); 
       }
     return(
         <form>
