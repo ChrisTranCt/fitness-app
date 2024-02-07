@@ -1,0 +1,31 @@
+.butts {
+  visibility:'hidden'!important;
+  color:'blue' !important;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+.UserDisplay{
+  display:flex;
+    flex-direction: Row;
+    width: 80%;
+    border:black;
+    margin-left: 0;
+    margin-right: 10%;
+    margin-top:2%;
+}
+.UserDisplay form{
+  /* display:flex; */
+  /* border:1px #ccc solid; */
+  margin-left:10px;
+  margin-right: 25px;
+  margin-bottom:50px;
+  border:1px red;
+}
+
+button{
+  width:25%;
+  height: 15px;
+} 

@@ -1,0 +1,7 @@
+missing functions:
+signing out
+deleting exercises
+you shouldnt be able to login again
+bugs:
+-
+-
